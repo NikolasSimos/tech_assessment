@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import PropTypes from 'prop-types';
-import {faSearch, faTrash} from '@fortawesome/free-solid-svg-icons';
+import {faSearch} from '@fortawesome/free-solid-svg-icons';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 
 import './Search.css';
@@ -18,12 +17,6 @@ const Search = () => {
     );
 };
 
-Search.propTypes = {
-    fields: PropTypes.shape({
-        firstName: PropTypes.shape({label: PropTypes.string}),
-        lastName: PropTypes.shape({label: PropTypes.string}),
-        email: PropTypes.shape({label: PropTypes.string}),
-    }).isRequired,
-};
+Search.propTypes = {};
 
 export default Search;

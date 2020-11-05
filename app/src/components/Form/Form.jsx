@@ -9,10 +9,7 @@ const Form = props => {
     const {formLabels, buttonText} = props;
     const {register, errors, handleSubmit} = useForm();
 
-    const onSubmit = data => {
-        alert(JSON.stringify(data));
-        console.log(errors);
-    };
+    const onSubmit = data => {};
 
     return (
         <form onSubmit={handleSubmit(onSubmit)}>

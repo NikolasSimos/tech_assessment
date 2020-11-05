@@ -45,7 +45,7 @@ const Slider = props => {
     };
 
     return (
-        <div className="slider-container">
+        <div className="slider-container" data-testid="slider-container">
             <div style={{display: 'flex', justifyContent: 'space-between'}}>
                 <div className="slider-text">{title}</div> <div className="slider-text">{amount / 10}%</div>
             </div>

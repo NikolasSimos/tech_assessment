@@ -20,7 +20,7 @@ const Page2 = () => {
     }, []);
 
     return (
-        <div className="home-container">
+        <div className="home-container" data-testid="page-2-container">
             <div className="home-header">
                 <div className="col-12 home-title">{sectionsLoaded && <h2>{description}</h2>}</div>
             </div>

@@ -10,7 +10,7 @@ const Tile = props => {
     const {icon, title, description, link} = props;
 
     return (
-        <div id="tile" className="tile-container">
+        <div id="tile" className="tile-container" data-testid="tile-container">
             <div className="tile-icon">
                 <img src={`${process.env.PUBLIC_URL + icon}.png`} id={icon} alt="altimage" />
             </div>

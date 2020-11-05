@@ -77,6 +77,6 @@ Unit/Integration tests are located in `__tests__` folder for each component.
 
 ``cd app``
 
-``npm run lint`` or `eslint 'src/**/*.{js,jsx}'`
+``npm run test``
 
 

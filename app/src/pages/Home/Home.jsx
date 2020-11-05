@@ -26,7 +26,7 @@ const Home = () => {
     }, []);
 
     return (
-        <div className="home-container">
+        <div className="home-container" data-testid="home-container">
             <div className="home-header">
                 <div className="col-12 home-title">{sectionsLoaded && <h2>{description}</h2>}</div>
                 <div className="home-tabs">

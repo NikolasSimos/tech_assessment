@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from 'react';
-import {Link} from 'react-router-dom';
 import PropTypes from 'prop-types';
 import {Carousel} from 'react-responsive-carousel';
 
@@ -43,7 +42,7 @@ const NavBar = ({location}) => {
     }, []);
 
     return (
-        <div className="container">
+        <div className="container" data-testid="navbar-container">
             <div className="col-4 tabs">
                 {tabsAreLoaded && tabs && tabs.length > 0 && (
                     <Tabs routerPage={routerPage}>
