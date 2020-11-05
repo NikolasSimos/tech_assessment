@@ -1,12 +1,12 @@
 .home-container {
     display: block;
     background-color: #f8faff;
-    height: auto;
+    height: 1124px;
     overflow: hidden;
 }
 
 .home-tiles {
-    height: 50vh; /* Magic here */
+    height: 50vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,7 +15,6 @@
 
 .home-header {
     height: 223px;
-    /* display: flex; */
     justify-content: center;
 }
 

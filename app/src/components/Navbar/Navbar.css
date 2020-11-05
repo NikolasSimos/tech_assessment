@@ -6,7 +6,6 @@
 .tabs {
     padding-top: 34px;
     display: flex;
-    margin-bottom: 15px; 
     margin-left: 36.8%;
 }
 
@@ -14,8 +13,6 @@
   margin-right : 20px;
 }
 
-.carousel-wrapper {
-}
 .carousel-item {
   margin: auto;
   width: 100%;
@@ -31,7 +28,7 @@
   align-items:center;
 }
 .carousel .slide img {
-  max-height: 264px;  /* change this to whatever you want */
+  max-height: 264px;  
   width: 100% !important;
 }
 
