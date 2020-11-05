@@ -9,17 +9,17 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import './Navbar.css';
 
 /* NavBar Component
-   Navigation static bar used for both application header
-   and in card component as well
+   Navigation static bar used for both Pages
 */
 
-const NavBar = () => {
+const NavBar = ({location}) => {
+    /* on Refresh set the correct Active tab
+     */
+    const routerPage = location && location.pathname && location.pathname.replace(/\//g, '');
     const [tabsAreLoaded, setTabsAreLoaded] = useState(false);
     const [tabs, setTabs] = useState([]);
-    const [tabserror, setTabError] = useState(null);
     const [slidesAreLoaded, setSlidesAreLoaded] = useState(false);
     const [slides, setSlides] = useState([]);
-    const [slideserror, setSlidesError] = useState(null);
 
     useEffect(() => {
         fetch('https://voda-react-assessment.herokuapp.com/menu')
@@ -29,10 +29,7 @@ const NavBar = () => {
                     setTabsAreLoaded(true);
                     setTabs(result);
                 },
-                error => {
-                    setTabsAreLoaded(true);
-                    setTabError(error);
-                },
+                error => {},
             );
         fetch('https://voda-react-assessment.herokuapp.com/slider')
             .then(res => res.json())
@@ -41,10 +38,7 @@ const NavBar = () => {
                     setSlidesAreLoaded(true);
                     setSlides(result);
                 },
-                error => {
-                    setSlidesAreLoaded(true);
-                    setSlidesError(error);
-                },
+                error => {},
             );
     }, []);
 
@@ -52,7 +46,7 @@ const NavBar = () => {
         <div className="container">
             <div className="col-4 tabs">
                 {tabsAreLoaded && tabs && tabs.length > 0 && (
-                    <Tabs>
+                    <Tabs routerPage={routerPage}>
                         {tabs.map(tab => (
                             <div key={tab.title} label={tab.title}>
                                 {tab.title}

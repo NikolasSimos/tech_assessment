@@ -48,22 +48,6 @@ label {
     font-weight: 200;
 }
 
-input[type='submit'] {
-    background: #ec5990;
-    color: white;
-    text-transform: uppercase;
-    border: none;
-    margin-top: 40px;
-    padding: 20px;
-    font-size: 16px;
-    font-weight: 100;
-    letter-spacing: 10px;
-}
-
-input[type='submit']:hover {
-    background: #bf1650;
-}
-
 input[type='button']:active,
 input[type='submit']:active {
     transition: 0.3s all;
@@ -85,6 +69,18 @@ input[type='submit'] {
     -webkit-appearance: none;
 }
 
-.buttonHolder{
+.buttonHolder {
     text-align: center;
+}
+
+.submit-button {
+    background-color: #166dd5;
+    color: white;
+    border: none;
+    margin-top: 40px;
+    padding: 20px;
+    font-size: 16px;
+    font-weight: 100;
+    letter-spacing: 10px;
+    border-radius: 3px;
 }

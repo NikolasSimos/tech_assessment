@@ -8,9 +8,9 @@ import './Tabs.css';
 class Tabs extends Component {
     constructor(props) {
         super(props);
-        const {children} = this.props;
+        const {children, routerPage} = this.props;
         this.state = {
-            activeTab: children[0] ? children[0].props.label : false,
+            activeTab: routerPage.replace(/-/g, ' ') || children[0].props.label,
         };
     }
 
@@ -50,6 +50,7 @@ class Tabs extends Component {
 Tabs.propTypes = {
     children: PropTypes.instanceOf(Array).isRequired,
     styles: PropTypes.string,
+    routerPage: PropTypes.string,
 };
 
 export default Tabs;

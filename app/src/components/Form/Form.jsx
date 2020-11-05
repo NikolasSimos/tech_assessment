@@ -3,7 +3,7 @@ import {useForm} from 'react-hook-form';
 import PropTypes from 'prop-types';
 import './Form.css';
 /* Form Component
-   
+   Form componenet with basic validation
 */
 const Form = props => {
     const {formLabels, buttonText} = props;
@@ -18,42 +18,51 @@ const Form = props => {
         <form onSubmit={handleSubmit(onSubmit)}>
             <input
                 type="number"
-                name="Phone"
+                name="phone"
                 placeholder={formLabels[0]}
                 className="input-form"
                 ref={register({
                     required: {value: true, message: 'Your Phone is required'},
-                    min: {value: 10, message: 'Phone must be 10 digits'},
+                    minLength: {value: 10, message: 'Phone must be 10 digits'},
+                    maxLength: {value: 10, message: 'Phone must be 10 digits'},
                 })}
-                style={{borderColor: errors[formLabels[0]] && 'red'}}
-                // ref={register({required: true, maxLength: 10, minLength: 10})}
+                style={{borderColor: errors.phone && 'red'}}
             />
 
-            <span> {errors.Phone && errors.Phone.message}</span>
+            <span>{errors.phone && errors.phone.message}</span>
             <input
                 type="text"
                 name="email"
                 placeholder={formLabels[1]}
                 className="input-form"
                 ref={register({
-                    required: true,
-                    pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    required: {value: true, message: 'Your email is required'},
+                    pattern: {
+                        value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                        message: 'invalid email address',
+                    },
                 })}
+                style={{borderColor: errors.email && 'red'}}
             />
-            <span> {errors.email && errors.email.message}</span>
+            <span>{errors.email && errors.email.message}</span>
             <input
                 type="text"
                 name="pass"
                 placeholder={formLabels[2]}
                 className="input-form"
                 ref={register({
-                    required: true,
-                    pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+                    required: {value: true, message: 'Your password is required'},
+                    pattern: {
+                        value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$/,
+                        message:
+                            'password should be more than 8 digits. It should include at least: a number, a capital letter, a symbol and a low case letter',
+                    },
                 })}
+                style={{borderColor: errors.pass && 'red'}}
             />
             <span> {errors.pass && errors.pass.message}</span>
             <div className="buttonHolder">
-                <input type="submit" label={buttonText} />
+                <input type="submit" className="submit-button" label={buttonText} />
             </div>
         </form>
     );

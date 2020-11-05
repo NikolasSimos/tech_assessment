@@ -32,7 +32,7 @@ class Tab extends Component {
             </div>
         ) : (
             <div id="wrapper">
-                <Link className={className} to={label} onClick={onClick}>
+                <Link className={className} to={label.replace(/\s+/g, '-')} onClick={onClick}>
                     {label}
                 </Link>
                 {activeTab === label && <div className={`dot navbar ${styles}`} />}
