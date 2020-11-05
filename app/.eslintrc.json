@@ -1,0 +1,29 @@
+{
+    "extends": [
+        "airbnb",
+        "react-app",
+        "prettier",
+        "prettier/flowtype",
+        "prettier/react",
+        "prettier/standard",
+        "plugin:prettier/recommended"
+    ],
+    "parserOptions": {
+        "ecmaVersion": 8,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "plugins": [
+        "react",   
+        "standard",
+        "prettier"          
+    ],
+    "rules": {
+        "jsx-a11y/href-no-hash": [0], 
+        "jsx-a11y/label-has-associated-control": "off",
+        "linebreak-style": 0,
+        "prettier/prettier": "error"
+    }
+}

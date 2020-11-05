@@ -1,0 +1,112 @@
+.home-container {
+    display: block;
+    background-color: #f8faff;
+    height: auto;
+    overflow: hidden;
+}
+
+.home-tiles {
+    height: 50vh; /* Magic here */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0px;
+}
+
+.home-header {
+    height: 223px;
+    /* display: flex; */
+    justify-content: center;
+}
+
+.home-tabs {
+    color: #404859;
+    display: flex;
+    justify-content: flex-end;
+    width: 83%;
+}
+
+.home-title {
+    margin-top: 50px;
+    color: #071e57;
+    justify-content: center;
+    display: flex;
+}
+
+.home-description {
+    margin-left: 19%;
+    color: #1292ee;
+    height: 50px;
+}
+
+.section2 {
+    margin-left: 18%;
+}
+
+.section2-title {
+    color: #071e57;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+.section2-subtitle {
+    color: #748494;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.no-padding {
+    padding: 0px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.flex-container > div {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+}
+
+.flex-container > div:nth-child(4) {
+    margin-left: 1px;
+}
+
+.flex-container > div:nth-child(5) {
+    margin-left: -1px;
+}
+
+.flex-container {
+    padding-top: 0px;
+    height: inherit;
+}
+
+.image {
+    height: 100%;
+    width: 100%;
+}
+
+.dot {
+    background: #222222;
+}
+
+.image-title {
+    color: #fff;
+    margin-left: -72%;
+    align-items: center;
+}
+
+.row::after {
+    content: '';
+    clear: both;
+    display: table;
+}

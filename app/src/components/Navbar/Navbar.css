@@ -1,0 +1,68 @@
+.container {
+    width: auto;
+    height: 365px;
+    background-color: #404859;
+}
+.tabs {
+    padding-top: 34px;
+    display: flex;
+    margin-bottom: 15px; 
+    margin-left: 36.8%;
+}
+
+#wrapper {
+  margin-right : 20px;
+}
+
+.carousel-wrapper {
+}
+.carousel-item {
+  margin: auto;
+  width: 100%;
+  height: auto;
+}
+
+.carousel .thumb img {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.carousel-item, .carousel-item.active {
+  align-items:center;
+}
+.carousel .slide img {
+  max-height: 264px;  /* change this to whatever you want */
+  width: 100% !important;
+}
+
+.carousel .control-dots .dot{
+  background-color: #404859;
+  border:1px solid #fff;  
+  opacity: 1;
+  outline:none;
+}
+
+.carousel .control-dots .dot.selected{
+  background-color: #1292ee;
+  outline:none;
+}
+.carousel .slide .header {
+  transition: all .5s ease-in-out;
+  position: absolute;
+  color: #fff; 
+  bottom: 60%;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+}
+
+.carousel .slide .subtitle {
+  transition: all .5s ease-in-out;
+  position: absolute;
+  color: #fff; 
+  bottom: 40%;
+  left: 50%;
+  margin-left: -45%;
+  width: 90%;
+}
+

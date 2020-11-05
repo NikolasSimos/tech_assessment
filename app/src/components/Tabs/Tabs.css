@@ -1,0 +1,57 @@
+.tab-list-item.noRouter .tab-list-active {
+    display: inline-block;
+    list-style: none;
+    color: black;
+    margin-bottom: -1px;
+    padding: 0.5rem 0.75rem;
+}
+
+.tab-list-item.noRouter {
+    background-color: white;
+    color: black;
+}
+
+.dot.navbar.noRouter {
+    background: #1292ee;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    left: 33%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.tab-list-item {
+    display: inline-block;
+    border: none;
+    position: relative;
+    list-style: none;
+    padding: 6px 12px;
+    padding-left: 0;
+    cursor: pointer;
+    color: #cacaca;
+    text-decoration: none;
+    outline: none;
+}
+
+.tab-list-active {
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+ .dot.navbar {
+    background: #2ed47d;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    left: 33%;
+    position: relative;
+    margin-top: 10px;
+}
+
+.tab-list {
+    padding-left: 0;
+    display: flex;
+    margin: 0;
+}

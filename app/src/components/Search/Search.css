@@ -1,0 +1,16 @@
+.container {
+    width: auto;
+    height: 365px;
+    background-color: #404859;
+}
+.searchContainer {
+    margin: 5px;
+    margin-left: 180px;
+}
+.input-search {
+    background-color: #404859;
+    outline:none;
+    color: #fff;
+    border: none;
+    
+}
